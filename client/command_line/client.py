@@ -2,4 +2,9 @@ import socket
 
 sock = socket.socket()
 
-sock.connect(('172.24.224.1', 9090))
+ip = input('Enter ip ')
+port = input('Enter port ')
+if port.isdigit():
+    port = int(port)
+
+sock.connect((ip, port))
